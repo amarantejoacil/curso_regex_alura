@@ -32,3 +32,81 @@ Encontrando cpf completo = \d{3}\.\d{3}\.\d{3}\-\d{2}
 UTILIZANDO MODELO TRAD.     ==  UTILIZANDO QUANTIFIER
 \d\d\d\.\d\d\d\.\d\d\d\-\d\d == \d{3}\.\d{3}\.\d{3}\-\d{2}
 
+----------------------------------------------------------------------------------------
+EXEMPLOS - EXERCCIOS
+01 - O número do IP de um computador é gerado ao conectá-lo à internet, esse número permite que o dispositivo seja identificado e capaz de enviar/receber informações. Abaixo há alguns exemplos de IP:
+
+126.1.112.34
+
+
+Cada grupo pode ter de um a três algarismos. Considerando somente essa regra, como podemos encontrar o padrão desses números?
+
+Resultado: \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}
+Cada digito possui entre um e três digitos.
+
+02 - Encontrar um CEP: 78110-044
+Regex = \d{5}\-\d{3}
+
+03 - Ecnontrar telefone (21) 3216-2345
+regex  = \(\d{2}\).\d{4}\-\d{4}
+regex2 = \(\d{2}\) \d{4}-\d{4}
+
+----------------------------------------------------------------------------------------
+
+Encontrar numeros: Exemplo 123456789
+[1-3] = resultado = 123 - captura intervalo 1-3
+[1-9] = resultado = 123456789 captura intervalo 1-9
+[1-3-59] = resultado = 123 5 9 (captura entre 1-3 e os número 5 e 9 )
+[1-3-5-9] = resultado = 123 56789 (não captura o 4)
+
+----------------------------------------------------------------------------------------
+OBS
+? - zero ou uma vezes
++ - uma ou mais vezes
+* - zero ou mais vezes
+
+{n} - exatamento n vezes
+{n,} - no mínimo n vezes.
+{n,m} - no mínimo n+1 vezes, no máximo m vezes
+
+
+Exemplo: 28 de dezembro de 2021
+resultando = \d{2}\sde\sdezembro\sde\s\d{4}
+\s = identificar espaço
+\s{1,0} ou \s+ 
+----------------------------------------------------------------------------------------
+
+[A-Z] = encontrar letras de A-Z
+[a-z] = encontrar letras de a-a
+obs. case sensitive
+
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
